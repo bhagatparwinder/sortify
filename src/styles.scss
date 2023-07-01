@@ -9,7 +9,13 @@
 $global-font: 'Nunito', sans-serif;
 $custom-primary: mat-palette($mat-grey, 50);
 $custom-accent: mat-palette($mat-green, A700);
-$custom-theme: mat-dark-theme($custom-primary, $custom-accent);
+$custom-theme: mat-dark-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+  ),
+  density: 0,
+));
 
 $background-color: #212121;
 $font-color: white;
@@ -19,7 +25,7 @@ $font-color: white;
 $custom-typography: mat-typography-config(
   $font-family: $global-font,
 );
-@include mat-core($custom-typography);
+@include mat-core();
 
 html,
 body {

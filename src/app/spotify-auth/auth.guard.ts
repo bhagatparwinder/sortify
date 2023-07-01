@@ -9,7 +9,7 @@ const spotifyApi = new SpotifyWebApi();
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private tokenSvc: TokenService, private router: Router, private _stateService: StateService) {}
+  constructor(private tokenSvc: TokenService, private router: Router, private _stateService: StateService) { }
 
   private getSpotifyAuthResponse(next: ActivatedRouteSnapshot): ISpotifyAuthResponse | undefined {
     if (!!next.fragment) {
