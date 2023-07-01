@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { StateService } from '../services/state.service';
 import { generateLoginUrl } from '../shared';
@@ -8,7 +8,7 @@ import { ISpotifyAuthResponse, TokenService } from './token.service';
 const spotifyApi = new SpotifyWebApi();
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthGuard  {
   constructor(private tokenSvc: TokenService, private router: Router, private _stateService: StateService) { }
 
   private getSpotifyAuthResponse(next: ActivatedRouteSnapshot): ISpotifyAuthResponse | undefined {
