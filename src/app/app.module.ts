@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthorizedComponent } from './authorized/authorized.component';
@@ -43,7 +41,6 @@ import { SpotifyIconComponent } from './spotify-icon/spotify-icon.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-
     TinyMusicPlayerModule,
   ],
   providers: [
@@ -55,6 +52,5 @@ import { SpotifyIconComponent } from './spotify-icon/spotify-icon.component';
     StateService,
   ],
   bootstrap: [AppComponent],
-  entryComponents: [SavePlaylistDialogComponent, DeletePlaylistDialogComponent, InfoDialogComponent],
 })
-export class AppModule {}
+export class AppModule { }
